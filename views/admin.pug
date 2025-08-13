@@ -1,0 +1,38 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/admin.css")
+
+block contents 
+    section.main-container
+        nav.admin-navigation-element 
+            .navigation
+                a(href="/admin" class=(path === "/admin" ? "route-link__active" : "route-link")) All listings 
+                a(href="/admin/add-listing" class=(path === "/admin/add-listing" ? "route-link__active" : "route-link")) Add a listing
+
+    
+        section.listings-container
+            table
+                thead
+                    tr 
+                        td Listing Id 
+                        td Hotel name 
+                        td Number of guests 
+                        td Duration
+                        td Admin action
+
+                tbody
+                    
+                    each booking in bookings
+                        tr
+                            td #{booking._id}
+                            td #{booking.hotelId}
+                            td #{booking.numberOfGuests}
+                            td #{`${booking.startDate} - ${booking.endDate}`}
+                            td.action 
+                                form(action="") 
+                                    input(type="submit" value="Approve")
+                                form(action="")
+                                    input(type="submit" value="Decline")
+
+                        

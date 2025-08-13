@@ -1,0 +1,12 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/404.css")
+
+block contents 
+    section.message-container 
+        .container  
+            h1 404 Error 
+            h4 Page not found
+            a.go-to-home-btn(href="/") Go back to Home 
+        

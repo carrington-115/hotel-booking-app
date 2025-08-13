@@ -1,0 +1,100 @@
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+.main-detail-container{
+    max-width: 100%;
+    padding: 50px 100px;
+}
+
+.main-detail-container .top-navigation{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.top-navigation .go-back-btn{
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, .1);
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.top-navigation .go-back-btn:hover{
+    background-color: rgba(255, 255, 255, .35);
+}
+
+
+.main-detail-container .detail-container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.detail-container .specific-detail-info{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.detail-container .detail-general-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.specific-detail-info .img-container{
+    width: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.specific-detail-info .details-specifications{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    
+}
+
+.details-specifications h3{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.details-specifications form .book-btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.details-specifications form .listing-id{
+    display: none;
+}
+
+.details-specifications form .book-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.detail-general-info h1{
+    font-size: 36px;
+    font-weight: bolder;
+}
+

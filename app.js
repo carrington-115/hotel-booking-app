@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 const bookingRouter = require("./routes/bookings");
+const adminRouter = require("./routes/admin");
+const { connection } = require("./util/client");
+const mongoose = require("mongoose");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -14,11 +17,18 @@ app.set("views", "views");
 
 // bookings routers
 app.use("/", bookingRouter);
+app.use("/admin", adminRouter);
 
 app.use((req, res, next) => {
-  res.send("404 error: Page not Found");
+  res.render("404", { pageTitle: "404: Page not found" });
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("The app is running");
-});
+mongoose
+  .connect(connection)
+  .then((data) => {
+    console.log("The client is connected to mongodb");
+    app.listen(process.env.PORT);
+  })
+  .catch((error) => {
+    console.error(error);
+  });

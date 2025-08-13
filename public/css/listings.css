@@ -1,0 +1,105 @@
+h1, h2, h3, h4, p{
+    padding: 0;
+    margin: 0;
+}
+
+.intro-component{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 150px 0px 150px;
+    margin-bottom: 50px;
+}
+
+.intro-component .intro-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.intro-info h1{
+    font-size: 48px;
+    color: black;
+}
+
+.intro-info p{
+    font-size: 24px;
+    color: gray;
+}
+
+.intro-component .filter-hotel-cards{
+    display: flex;
+    width: 100%;
+    margin: 40px 0px 15px 0px;
+}
+
+.filter-hotel-cards .search-input{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-input .select-btn{
+    font-size: 24px;
+    padding: 10px 25px;
+}
+
+.search-input .search-date{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-date .date-selector{
+    font-size: 24px;
+    padding: 10px 25px;
+}
+
+.search-input .search-btn{
+    font-size: 24px;
+    padding: 10px 25px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.search-input .search-btn:hover{
+    background-color: rgba(0, 0, 0, .7);
+}
+
+
+.admin-card-container{
+    margin: 50px 150px;
+    padding: 40px 30px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 20px;
+    align-items: flex-start;
+}
+
+h1{
+    font-size: 48px;
+    color: white;
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+.admin-card-container .admin-btn{
+    padding: 10px 24px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.admin-card-container .admin-btn:hover{
+    background-color: rgba(0, 0, 0, .7);
+}

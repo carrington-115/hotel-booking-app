@@ -1,0 +1,35 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/booking.css")
+
+block contents 
+    section.main-container
+        .hotel-listing-container 
+            if listing
+                .image-container 
+                    img(src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/664263169.jpg?k=665206cfb09f646949a5ea4e8379b306ddd445b602f055173c50e7a35b02107c&o=", alt="sample-image-element")
+                .list-details-container 
+                    h2 #{listing.name}
+                    p #{listing.hotelDescription}
+                    h3 #{listing.startPrice} - #{listing.endPrice} INR per night
+                    h3 #{listing.hotelLocation} 
+                    form
+                        a(href="/").cancel-booking-btn Cancel booking
+            else 
+                .no-listing-container 
+                    h3 You have not yet selected a listing. Go to the Listing page 
+                    a(href="/listings").redirect-btn All listings 
+
+
+    if listing
+        section.booking-container
+            h1 Complete booking Portal
+            form(action="/admin/add-booking" method="POST").set-booking-form
+                .date-section 
+                    input(type="date" name="startDate") 
+                    input(type="date" name="endDate")
+                input(type="text" name="hotelId" value=(hotelId)).hidden-id
+                input(type="number" placeholder="Number of guest" name="guestNumber").booking-info
+                input(type="text" placeholder="Purpose of stay" name="stayPurpose").booking-info
+                input(type="submit" value="Complete booking").complete-booking-btn 

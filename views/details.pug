@@ -1,0 +1,41 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/detail.css")
+
+block contents 
+    section.main-detail-container
+        nav.top-navigation 
+            a(href="/").go-back-btn Go back
+
+        section.detail-container 
+            .specific-detail-info 
+                .img-container 
+                    img(src=(listing.image) alt="sample-image-container")
+                
+                .details-specifications 
+                    h3 #{listing.name}
+                    ul 
+                        li 
+                            u Location details: #{listing.hotelLocation}, 
+                            span
+                                a(href=(listing.mapLocation)) Location on google maps  
+                            
+                        li 
+                            u Price Ranges: 
+                            span #{listing.startPrice} INR - #{listing.endPrice} INR per night 
+                        li 
+                            u Resources: 
+                            span #{listing.resources}
+
+                        li 
+                            u Types of rooms: 
+                            span #{listing.roomTypes}
+
+                    form(action="/book-now" method="GET")
+                        a(href=`/book-now/${listing._id}?bookNow=true`).book-btn Complete booking 
+
+            .detail-general-info
+                h1 #{listing.name}
+                p #{listing.hotelDescription}
+                

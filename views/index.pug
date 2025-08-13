@@ -2,6 +2,7 @@ extends ./layout.pug
 
 block styles 
     link(rel="stylesheet", href="/css/index.css")
+    link(rel="stylesheet", href="/css/listings.css")
 
 block contents 
     section.hero 
@@ -10,56 +11,19 @@ block contents
             u We don't shield data for marketting sake. Transparency is our core. Try it now!! 
         .link-actions 
             a(href="/booking").book-now-btn Try it now
-            a(href="/booking").view-all-listings View listings
+            a(href="/listings").view-all-listings View listings
 
     section.hotel-listings 
         h2 Available Listings
-        ul.listings-container 
-            li.hotel-card-listing 
-                .card
-                    .img-container 
-                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
-                    .details-list 
-                        h3 Sample Hotel Name 
-                        p Sample hotel city
-                        p Sample Hotel cost per night 
-                    .action 
-                        a(href="").book-btn Book now! 
-            
-            li.hotel-card-listing 
-                .card
-                    .img-container 
-                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
-                    .details-list 
-                        h3 Sample Hotel Name 
-                        p Sample hotel city
-                        p Sample Hotel cost per night 
-                    .action 
-                        a(href="").book-btn Book now! 
-            
-            li.hotel-card-listing 
-                .card
-                    .img-container 
-                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
-                    .details-list 
-                        h3 Sample Hotel Name 
-                        p Sample hotel city
-                        p Sample Hotel cost per night 
-                    .action 
-                        a(href="").book-btn Book now! 
-            
-            li.hotel-card-listing 
-                .card
-                    .img-container 
-                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
-                    .details-list 
-                        h3 Sample Hotel Name 
-                        p Sample hotel city
-                        p Sample Hotel cost per night 
-                    .action 
-                        a(href="").book-btn Book now! 
-
-
-        
-
-            
+        ul.listings-container
+            each listing in listings
+                li.hotel-card-listing 
+                    .card
+                        .img-container 
+                            img(src=(listing.image) alt="Listing-image")
+                        .details-list 
+                            h3 #{listing.name}
+                            p #{listing.hotelLocation}
+                            p #{listing.startPrice} INR - #{listing.endPrice} per night
+                        .action 
+                            a(href=`/listings/${listing._id}`).book-btn Book now! 

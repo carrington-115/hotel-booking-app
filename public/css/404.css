@@ -1,0 +1,41 @@
+.message-container{
+    max-width: 100%;
+    display: flex;
+    padding: 50px 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h4{
+    padding: 0;
+    margin: 0;
+}
+
+.message-container .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(250, 155, 155, 0.693);
+    gap: 30px;
+    padding: 50px 100px;
+}
+
+.container h1{
+    font-size: 64px;
+}
+
+.container h4{
+    font-size: 36px;
+}
+
+.container h1, .container h4{
+    color: rgb(82, 1, 1);
+}
+
+.container .go-to-home-btn{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
