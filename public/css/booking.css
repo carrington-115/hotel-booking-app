@@ -1,0 +1,124 @@
+h1, h2, h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-container{
+    padding: 40px 150px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-container .hotel-listing-container{
+    display: flex;
+    gap: 40px;
+}
+
+.hotel-listing-container .image-container{
+    width: 80vw;
+}
+
+.hotel-listing-container .image-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.hotel-listing-container .list-details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+} 
+
+.list-details-container h2{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.list-details-container p{
+    font-size: 16px;
+    color: gray;
+}
+
+.list-details-container h3{
+    font-size: 20px;
+    text-decoration: underline;
+    color: white;
+}
+
+.hotel-listing-container form .cancel-booking-btn{
+    margin-top: 12px;
+    background-color: rgba(128, 128, 128, 0.5);
+    font-size: 18px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    color: white;
+}
+
+.hotel-listing-container form .cancel-booking-btn:hover{
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+
+.booking-container{
+    max-width: 100%;
+    margin: 50px 0px;
+    padding: 50px 0px;
+    background-color: rgba(255, 255, 255, .15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.booking-container .set-booking-form{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 150px;
+    gap: 20px;
+}
+
+.set-booking-form .date-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 100px;
+}
+
+.booking-container h1{
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.set-booking-form .date-section input{
+    font-size: 30px;
+    padding: 10px 25px;
+}
+
+.set-booking-form .booking-info{
+    width: 92%;
+    font-size: 24px;
+    padding: 10px 25px;
+}
+
+.set-booking-form .complete-booking-btn{
+    font-size: 24px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border: none;
+    padding: 8px 36px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+.set-booking-form .complete-booking-btn:hover{
+    background-color: gray;
+}

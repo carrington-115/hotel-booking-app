@@ -11,3 +11,17 @@ exports.getListingsController = (req, res, next) => {
     path: "/listings",
   });
 };
+
+exports.getBookDetail = (req, res, next) => {
+  res.render("details", {
+    path: "",
+    pageTitle: "Some random thing", // to be updatec
+  });
+};
+
+exports.getBooking = (req, res, next) => {
+  res.render("booking", {
+    path: "/book-now",
+    pageTitle: "",
+  });
+};

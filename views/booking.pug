@@ -1,0 +1,29 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/booking.css")
+
+block contents 
+    section.main-container
+        .hotel-listing-container 
+            .image-container 
+                img(src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/664263169.jpg?k=665206cfb09f646949a5ea4e8379b306ddd445b602f055173c50e7a35b02107c&o=", alt="sample-image-element")
+            .list-details-container 
+                h2 Sample Hotel booking Name Title 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores cupiditate. Corrupti nam magnam maiores rerum quibusdam, quaerat velit eaque ab repellendus deserunt facilis nostrum, pariatur explicabo doloribus autem? Error.
+                p que ab repellendus deserunt facilis nostrum, pariatur explicabo doloribus autem? Error.
+                h3 2 USD per night
+                h3 City: Sample city 
+                form(action="")
+                    input(type="submit" value="Cancel booking").cancel-booking-btn 
+
+    section.booking-container
+        h1 Complete booking Portal
+        form(action="").set-booking-form
+            .date-section 
+                input(type="date" name="startDate") 
+                input(type="date" name="EndDate")
+
+            input(type="number" placeholder="Number of guest").booking-info
+            input(type="text" placeholder="Purpose of stay").booking-info
+            input(type="submit" value="Complete booking").complete-booking-btn 
