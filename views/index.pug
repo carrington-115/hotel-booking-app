@@ -2,6 +2,7 @@ extends ./layout.pug
 
 block styles 
     link(rel="stylesheet", href="/css/index.css")
+    link(rel="stylesheet", href="/css/listings.css")
 
 block contents 
     section.hero 
@@ -10,7 +11,7 @@ block contents
             u We don't shield data for marketting sake. Transparency is our core. Try it now!! 
         .link-actions 
             a(href="/booking").book-now-btn Try it now
-            a(href="/booking").view-all-listings View listings
+            a(href="/listings").view-all-listings View listings
 
     section.hotel-listings 
         h2 Available Listings
@@ -60,6 +61,10 @@ block contents
                         a(href="").book-btn Book now! 
 
 
-        
+    section.admin-card-container
+        h1 
+            u Try this if you're an Admin 
+        p A core function of the admin is booking management. This includes viewing, confirming, modifying, or canceling reservations, handling special requests, and managing guest check-ins and check-outs. They have access to customer data, enabling them to view user profiles, manage their bookings, and address any inquiries or issues. Furthermore, admins can generate detailed reports and analytics on bookings, revenue, occupancy rates, and user activity, providing valuable insights for business decisions. They also play a vital role in content management, such as uploading images, writing descriptions for hotels and rooms, and managing website banners and promotional content. Some advanced platforms even allow admins to manage sub-admin accounts and their permissions, ensuring a hierarchical control structure. Ultimately, the admin acts as the central orchestrator, ensuring the platform runs efficiently, effectively, and profitably. 🏨
+        a(href="").admin-btn Go to Admin 
 
             

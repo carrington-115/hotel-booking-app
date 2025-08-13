@@ -2,6 +2,7 @@ extends ./layout.pug
 
 block styles 
     link(rel="stylesheet", href="/css/listings.css")
+    link(rel="stylesheet", href="/css/index.css")
 
 block contents 
     section.intro-component 
@@ -25,3 +26,101 @@ block contents
                     input(type="date" name="startDate").date-selector
                     input(type="date" name="endDate").date-selector
                 input(type="submit" value="Search").search-btn
+
+    
+    section.hotel-listings 
+        h2 Available Listings
+        ul.listings-container 
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+
+
+    section.admin-card-container
+        h1 
+            u Try this if you're an Admin 
+        p A core function of the admin is booking management. This includes viewing, confirming, modifying, or canceling reservations, handling special requests, and managing guest check-ins and check-outs. They have access to customer data, enabling them to view user profiles, manage their bookings, and address any inquiries or issues. Furthermore, admins can generate detailed reports and analytics on bookings, revenue, occupancy rates, and user activity, providing valuable insights for business decisions. They also play a vital role in content management, such as uploading images, writing descriptions for hotels and rooms, and managing website banners and promotional content. Some advanced platforms even allow admins to manage sub-admin accounts and their permissions, ensuring a hierarchical control structure. Ultimately, the admin acts as the central orchestrator, ensuring the platform runs efficiently, effectively, and profitably. 🏨
+        a(href="").admin-btn Go to Admin 

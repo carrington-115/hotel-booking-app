@@ -8,6 +8,7 @@ h1, h2, h3, h4, p{
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 50px 150px 0px 150px;
+    margin-bottom: 50px;
 }
 
 .intro-component .intro-info{
@@ -60,4 +61,45 @@ h1, h2, h3, h4, p{
     border: none;
     background-color: black;
     color: white;
+    cursor: pointer;
+}
+
+.search-input .search-btn:hover{
+    background-color: rgba(0, 0, 0, .7);
+}
+
+
+.admin-card-container{
+    margin: 50px 150px;
+    padding: 40px 30px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 20px;
+    align-items: flex-start;
+}
+
+h1{
+    font-size: 48px;
+    color: white;
+}
+
+p{
+    font-size: 20px;
+    color: white;
+}
+
+.admin-card-container .admin-btn{
+    padding: 10px 24px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.admin-card-container .admin-btn:hover{
+    background-color: rgba(0, 0, 0, .7);
 }
