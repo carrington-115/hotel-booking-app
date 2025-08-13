@@ -1,0 +1,33 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/admin.css")
+
+block contents 
+    section.main-container
+        nav.admin-navigation-element 
+            .navigation
+                a(href="/admin" class=(path === "/admin" ? "route-link__active" : "route-link")) All listings 
+                a(href="/admin/add-listing" class=(path === "/admin/add-listing" ? "route-link__active" : "route-link")) Add a listing
+
+        .listing-form-container
+            h3 Add a Listing
+            form(action="")
+                label(for="hotel") Hotel name
+                input(type="text" name="hotel" placeholder="Hotel name" required)
+                input(type="url" name="image" placeholder="Enter room image url" required)
+                label(for="hotelLocation") Hotel Location
+                input(type="text" name="hotelLocation" placeholder="Hotel location" required)
+                input(type="url" name="mapLocation" placeholder="Hotel URL on Google maps")
+                label(for="resources") Hotel Resources 
+                textarea(name="resources" placeholder="Hotel Resources" rows="5" required) Hotel Resources
+                label(for="roomTypes") Room types
+                input(type="text" placeholder="Room types" name="roomTypes" required)
+                label(for="priceRange") Price range (INR)
+                .price-range-container
+                    input(type="number" placeholder="Start price" name="startPrice" required) 
+                    span -
+                    input(type="number" placeholder="End price" name="endPrice" required) 
+                label(for="hotelDescription") Hotel description
+                textarea(name="hotelDescription" placeholder="Hotel description" rows="5" required) Hotel description
+                input(type="submit" value="Add Listing").add-listing-btn
