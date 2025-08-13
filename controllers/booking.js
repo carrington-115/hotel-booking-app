@@ -31,10 +31,19 @@ exports.getListingsController = (req, res, next) => {
 
 exports.getBookDetail = (req, res, next) => {
   const { listingId } = req.params;
-  res.render("details", {
-    path: `/listings/${listingId}`,
-    pageTitle: "Some random thing", // to be updatec
-  });
+  Listing.findOne({
+    _id: listingId,
+  })
+    .then((listing) => {
+      res.render("details", {
+        path: `/listings/${listingId}`,
+        pageTitle: "Some random thing", // to be updatec
+        listing: listing,
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
 
 exports.getBooking = (req, res, next) => {

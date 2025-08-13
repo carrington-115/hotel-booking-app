@@ -84,6 +84,10 @@ h1, h2, h3, h4, p{
     cursor: pointer;
 }
 
+.details-specifications form .listing-id{
+    display: none;
+}
+
 .details-specifications form .book-btn:hover{
     background-color: white;
     color: black;
