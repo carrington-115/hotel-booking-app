@@ -1,0 +1,63 @@
+h1, h2, h3, h4, p{
+    padding: 0;
+    margin: 0;
+}
+
+.intro-component{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px 150px 0px 150px;
+}
+
+.intro-component .intro-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.intro-info h1{
+    font-size: 48px;
+    color: black;
+}
+
+.intro-info p{
+    font-size: 24px;
+    color: gray;
+}
+
+.intro-component .filter-hotel-cards{
+    display: flex;
+    width: 100%;
+    margin: 40px 0px 15px 0px;
+}
+
+.filter-hotel-cards .search-input{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-input .select-btn{
+    font-size: 24px;
+    padding: 10px 25px;
+}
+
+.search-input .search-date{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-date .date-selector{
+    font-size: 24px;
+    padding: 10px 25px;
+}
+
+.search-input .search-btn{
+    font-size: 24px;
+    padding: 10px 25px;
+    border: none;
+    background-color: black;
+    color: white;
+}

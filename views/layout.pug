@@ -7,16 +7,16 @@ html(lang="en")
         link(rel="stylesheet", href="/css/layout.css")
         block styles
     body 
-        header 
+        header(class=(path==="/listings" && "listings-header")) 
             h1.app-logo Hotel Booking App
             nav.app-header-links 
                 ul 
                     li 
                         a(href="/" class=(path==='/' && 'active-link')) Home
                     li 
-                        a(href="/all-listings" class=(path==='/all-listings' && 'active-link')) Listings
-                    li 
-                        a(href="/book-now" class=(path==='/book-now' && 'active-link')) Book now
+                        a(href="/listings" class=(path==='/listings' && 'active-link')) Listings
                     li
                         a(href="/admin" class=(path==='/admin' && 'active-link')) Admin bookings
+                    li.book-now-btn 
+                        a(href="/book-now" class=(path==='/book-now' && 'active-link')) Book now
         block contents

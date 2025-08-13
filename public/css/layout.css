@@ -9,8 +9,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
-    padding: 15px 150px;
+    padding: 45px 150px 15px 150px;
 }
 
 header .app-logo{
@@ -25,6 +24,7 @@ header nav{
 header nav ul{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     gap: 20px;
 }
 
@@ -44,4 +44,27 @@ ul li .active-link{
 
 ul li a:hover{
     color: white;
+}
+
+nav ul .book-now-btn a{
+    padding: 9px 18px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+}
+
+nav ul .book-now-btn a:hover{
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.listings-header{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.listings-header .app-logo{
+    color: black;
+}
+
+.listings-header .app-header-links ul li .active-link{
+    color: black;
 }

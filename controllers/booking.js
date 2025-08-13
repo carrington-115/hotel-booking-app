@@ -4,3 +4,10 @@ exports.getIndexController = (req, res, next) => {
     path: "/",
   });
 };
+
+exports.getListingsController = (req, res, next) => {
+  res.render("listings", {
+    pageTitle: "Listings: find your next stay",
+    path: "/listings",
+  });
+};

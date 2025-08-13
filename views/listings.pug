@@ -1,0 +1,27 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/listings.css")
+
+block contents 
+    section.intro-component 
+        .intro-info 
+           h1 Book your next stay in any city 
+           p Search the best hotels, motels, etc, that meet your cost, quality, and assessment 
+
+        //- This part will include a container that holds the city, date, search button
+        form(action="").filter-hotel-cards
+            .search-input 
+                select(name="city").select-btn
+                    option(value="Select") --Select city--
+                    option(value="Lucknow") Lucknow
+                    option(value="Bengaluru") Bengaluru   
+                    option(value="Gurugurum") Gurgurum
+                    option(value="New York") New york   
+                    option(value="Abu Dhabi") Abu Dhabi   
+                    option(value="London") London
+
+                .search-date 
+                    input(type="date" name="startDate").date-selector
+                    input(type="date" name="endDate").date-selector
+                input(type="submit" value="Search").search-btn
