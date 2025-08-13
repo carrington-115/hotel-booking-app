@@ -25,11 +25,11 @@ block contents
     if listing
         section.booking-container
             h1 Complete booking Portal
-            form(action="").set-booking-form
+            form(action="/admin/add-booking" method="POST").set-booking-form
                 .date-section 
                     input(type="date" name="startDate") 
-                    input(type="date" name="EndDate")
+                    input(type="date" name="endDate")
 
-                input(type="number" placeholder="Number of guest").booking-info
-                input(type="text" placeholder="Purpose of stay").booking-info
+                input(type="number" placeholder="Number of guest" name="guestNumber").booking-info
+                input(type="text" placeholder="Purpose of stay" name="stayPurpose").booking-info
                 input(type="submit" value="Complete booking").complete-booking-btn 

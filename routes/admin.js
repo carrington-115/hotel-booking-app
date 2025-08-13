@@ -1,5 +1,9 @@
 const express = require("express");
-const { getAdmin, getAdminAddListing } = require("../controllers/admin");
+const {
+  getAdmin,
+  getAdminAddListing,
+  postSubmitBooking,
+} = require("../controllers/admin");
 const { postAddListToDb } = require("../controllers/booking");
 const Router = express.Router();
 
@@ -9,5 +13,6 @@ Router.get("/add-listing", getAdminAddListing);
 
 // post routes
 Router.post("/add-listing", postAddListToDb);
+Router.post("/add-booking", postSubmitBooking);
 
 module.exports = Router;
