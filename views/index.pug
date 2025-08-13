@@ -1,0 +1,65 @@
+extends ./layout.pug
+
+block styles 
+    link(rel="stylesheet", href="/css/index.css")
+
+block contents 
+    section.hero 
+        h1 Find the best Hotels, Motels, On-demand and high quality rooms available to your location 
+        p HBA brings to you the listings that you won't find any where else. 
+            u We don't shield data for marketting sake. Transparency is our core. Try it now!! 
+        .link-actions 
+            a(href="/booking").book-now-btn Try it now
+            a(href="/booking").view-all-listings View listings
+
+    section.hotel-listings 
+        h2 Available Listings
+        ul.listings-container 
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+            
+            li.hotel-card-listing 
+                .card
+                    .img-container 
+                        img(src="https://lh3.googleusercontent.com/p/AF1QipODeuFxEJEFpt3xOa4HA99IXJNTltAL5gj1V_Yb=w252-h168-k-no", alt="")
+                    .details-list 
+                        h3 Sample Hotel Name 
+                        p Sample hotel city
+                        p Sample Hotel cost per night 
+                    .action 
+                        a(href="").book-btn Book now! 
+
+
+        
+
+            
