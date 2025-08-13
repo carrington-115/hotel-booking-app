@@ -1,0 +1,57 @@
+extends ./layout.pug 
+
+block styles 
+    link(rel="stylesheet", href="/css/detail.css")
+
+block contents 
+    section.main-detail-container
+        nav.top-navigation 
+            a(href="/").go-back-btn Go back
+
+        section.detail-container 
+            .specific-detail-info 
+                .img-container 
+                    img(src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/664263185.jpg?k=d4b076a9cb0fca25556331c648d83862e0eaad17352ba901c8ee73f6bc7bae12&o=", alt="sample-image-container")
+                
+                .details-specifications 
+                    h3 Sample Hotel Name 
+                    ul 
+                        li 
+                            u Location details: Lucknow, Uttar pradesh, India 
+                            span
+                                a(href="https://cf.bstatic.com/xdata/images/hotel/max1024x768/664263185.jpg?k=d4b076a9cb0fca25556331c648d83862e0eaad17352ba901c8ee73f6bc7bae12&o=") Location on google maps  
+                            
+                        li 
+                            u Price Ranges 
+                            span $10 - $200 per night 
+                        li 
+                            u Resources 
+                            span Beds, individual bathrooms, Study rooms, dinning, retreat spaces, Indoor spa services, Swimming pools, free parking, free wifi services
+
+                        li 
+                            u Types of rooms 
+                            span Single rooms, double rooms, individual and couple suites
+
+                    form(action="")
+                        input(type="submit" value="Complete booking").book-btn 
+
+            .detail-general-info
+                h1 Sample Hotel Name 
+                p Hyatt Regency Lucknow Gomti Nagar is located in the upcoming IT district of Vibhuti Khand in Lucknow. It offers an outdoor pool, a luxurious spa and a 24-hour fitness centre. Hyatt Regency offers 4 dining options. The air-conditioned rooms feature a flat-screen satellite TV, minibar and an electric kettle. The private bathroom comes with a shower, bathtub and free toiletries. Hyatt Regency Lucknow Gomti Nagar provides a 24-hour front desk and a well-equipped meeting/banqueting facility. Bara Imambara, Chota Imambara and Rumi Darwaza are within 12.2 km. Chaudhary Charan Singh International Airport is 25 km. Dining options include Rocca, the all-day dining restaurant that serves Indian and Italian , vibrant China House opens for dinner serves authentic Chinese delicacies.. Located at lobby level, Market serves refreshing beverages and light snacks. UP's is a stylish lounge bar. Couples in particular like the location – they rated it 8.8 for a two-person trip.
+                .details-specifications 
+                    ul 
+                        li 
+                            u Location details: Lucknow, Uttar pradesh, India 
+                            span
+                                a(href="") Location on google maps  
+                            
+                        li 
+                            u Price Ranges 
+                            span $10 - $200 per night 
+                        li 
+                            u Resources 
+                            span Beds, individual bathrooms, Study rooms, dinning, retreat spaces, Indoor spa services, Swimming pools, free parking, free wifi services
+
+                        li 
+                            u Types of rooms 
+                            span Single rooms, double rooms, individual and couple suites

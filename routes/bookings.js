@@ -9,7 +9,7 @@ const Router = express.Router();
 
 Router.get("/", getIndexController);
 Router.get("/listings", getListingsController);
-// Router.get("/:listingId", getBookDetail);
+Router.get("/listings/:listingId", getBookDetail);
 Router.get("/book-now", getBooking);
 
 module.exports = Router;

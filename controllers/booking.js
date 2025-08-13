@@ -13,8 +13,9 @@ exports.getListingsController = (req, res, next) => {
 };
 
 exports.getBookDetail = (req, res, next) => {
+  const { listingId } = req.params;
   res.render("details", {
-    path: "",
+    path: `/listings/${listingId}`,
     pageTitle: "Some random thing", // to be updatec
   });
 };
