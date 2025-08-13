@@ -49,8 +49,26 @@ exports.getBookDetail = (req, res, next) => {
 exports.getBooking = (req, res, next) => {
   res.render("booking", {
     path: "/book-now",
-    pageTitle: "",
+    pageTitle: "Listing: book now",
   });
+};
+
+exports.getBookWithQueryDetails = (req, res, next) => {
+  const { bookId } = req.params;
+  const { bookNow } = req.query;
+
+  if (!bookNow) {
+    res.redirect("/book-now");
+  }
+  Listing.findOne({ _id: bookId })
+    .then((listing) => {
+      res.render("booking", {
+        path: "/book-now",
+        pageTitle: `Listing: ${listing.name}`,
+        listing: listing,
+      });
+    })
+    .catch((err) => console.error(err));
 };
 
 // all post controllers
@@ -84,4 +102,9 @@ exports.postAddListToDb = (req, res, next) => {
       res.redirect("/");
     })
     .catch((err) => console.error(err));
+};
+
+exports.postBookingInfo = (req, res, next) => {
+  const bodyData = req.body;
+  console.log(bodyData);
 };

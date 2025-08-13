@@ -17,7 +17,7 @@ h1, h2, h3, p{
 }
 
 .hotel-listing-container .image-container{
-    width: 80vw;
+    width: 45%;
 }
 
 .hotel-listing-container .image-container img{
@@ -30,6 +30,7 @@ h1, h2, h3, p{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 50%;
 } 
 
 .list-details-container h2{
@@ -48,7 +49,11 @@ h1, h2, h3, p{
     color: white;
 }
 
-.hotel-listing-container form .cancel-booking-btn{
+.hotel-listing-container .list-details-container form{
+    margin-top: 20px;
+}
+
+.hotel-listing-container .list-details-container form .cancel-booking-btn{
     margin-top: 12px;
     background-color: rgba(128, 128, 128, 0.5);
     font-size: 18px;
@@ -57,6 +62,7 @@ h1, h2, h3, p{
     border: none;
     border-radius: 25px;
     color: white;
+    text-decoration: none;
 }
 
 .hotel-listing-container form .cancel-booking-btn:hover{
@@ -121,4 +127,25 @@ h1, h2, h3, p{
 
 .set-booking-form .complete-booking-btn:hover{
     background-color: gray;
+}
+
+.main-container .hotel-listing-container .no-listing-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.no-listing-container h3{
+    font-size: 36px;
+}
+
+.no-listing-container .redirect-btn{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
 }

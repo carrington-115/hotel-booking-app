@@ -32,9 +32,8 @@ block contents
                             u Types of rooms: 
                             span #{listing.roomTypes}
 
-                    form(action="")
-                        input(type="text" value=(listing._id)).listing-id
-                        input(type="submit" value="Complete booking").book-btn 
+                    form(action="/book-now" method="GET")
+                        a(href=`/book-now/${listing._id}?bookNow=true`).book-btn Complete booking 
 
             .detail-general-info
                 h1 #{listing.name}
