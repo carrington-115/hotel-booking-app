@@ -22,36 +22,17 @@ block contents
                         td Admin action
 
                 tbody
-                    tr
-                        td dakfdl;jaieoiejfadg
-                        td Sample hotel name 
-                        td 10 
-                        td 2
-                        td.action 
-                            form(action="") 
-                                input(type="submit" value="Approve")
-                            form(action="")
-                                input(type="submit" value="Decline")
+                    
+                    each booking in bookings
+                        tr
+                            td #{booking._id}
+                            td #{booking.hotelId}
+                            td #{booking.numberOfGuests}
+                            td #{`${booking.startDate} - ${booking.endDate}`}
+                            td.action 
+                                form(action="") 
+                                    input(type="submit" value="Approve")
+                                form(action="")
+                                    input(type="submit" value="Decline")
 
-                    tr
-                        td dakfdl;jaieoiejfadg
-                        td Sample hotel name 
-                        td 10 
-                        td 2
-                        td.action 
-                            form(action="") 
-                                input(type="submit" value="Approve")
-                            form(action="")
-                                input(type="submit" value="Decline")
-
-                    tr
-                        td dakfdl;jaieoiejfadg
-                        td Sample hotel name 
-                        td 10 
-                        td 2
-                        td.action 
-                            form(action="") 
-                                input(type="submit" value="Approve")
-                            form(action="")
-                                input(type="submit" value="Decline")
-
+                        

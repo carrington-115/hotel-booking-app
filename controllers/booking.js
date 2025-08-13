@@ -60,12 +60,15 @@ exports.getBookWithQueryDetails = (req, res, next) => {
   if (!bookNow) {
     res.redirect("/book-now");
   }
+
   Listing.findOne({ _id: bookId })
     .then((listing) => {
+      console.log(listing);
       res.render("booking", {
         path: "/book-now",
         pageTitle: `Listing: ${listing.name}`,
         listing: listing,
+        hotelId: listing._id,
       });
     })
     .catch((err) => console.error(err));

@@ -97,6 +97,10 @@ h1, h2, h3, p{
     gap: 100px;
 }
 
+.set-booking-form .hidden-id{
+    display: none;
+}
+
 .booking-container h1{
     font-size: 36px;
     color: white;
