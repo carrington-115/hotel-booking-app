@@ -7,9 +7,9 @@ const {
 } = require("../controllers/booking");
 const Router = express.Router();
 
+// booking routes
 Router.get("/", getIndexController);
 Router.get("/listings", getListingsController);
 Router.get("/listings/:listingId", getBookDetail);
 Router.get("/book-now", getBooking);
-
 module.exports = Router;

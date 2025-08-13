@@ -1,0 +1,106 @@
+h1, h2, h3, h4, p{
+    margin: 0;
+    padding: 0;
+}
+
+.main-container{
+    max-width: 100%;
+    padding: 50px 100px;
+}
+
+.main-container .admin-navigation-element{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-navigation-element .navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+.admin-navigation-element .navigation .route-link, .admin-navigation-element .navigation .route-link__active{
+    padding: 12px 24px;
+    font-size: 24px;
+    text-decoration: none;
+    color: gray;
+    border-bottom: 1px solid transparent;
+}
+
+.admin-navigation-element .navigation .route-link:hover, .admin-navigation-element .navigation .route-link__active:hover{
+    color: white;
+    border-bottom-color: white;
+}
+
+.admin-navigation-element .navigation .route-link__active {
+    color: white;
+    border-bottom-color: white;
+}
+
+.main-container .listings-container{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.listings-container table{
+    width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+thead {
+  background-color: rgba(142, 142, 142, 0.8);
+  color: black;
+}
+
+tbody tr td a{
+    color: white;
+}
+
+table tbody tr{
+    cursor: pointer;
+}
+
+table tbody tr .delete-column{
+    padding: 12px 15px;
+}
+
+tr .delete-column form .id-element{
+    display: none;
+}
+
+tr .delete-column form .submit-btn{
+    font-size: 16px;
+    border: none;
+    color: red;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 8px 14px;
+    background-color: transparent;
+}
+
+tr .delete-column form .submit-btn:hover{
+    color: white;
+    background-color: red;
+}
+
+table tbody tr:hover{
+    background-color: rgba(142, 142, 142, 0.3);
+}
+
+table tbody tr .action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

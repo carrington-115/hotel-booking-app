@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const app = express();
 const bookingRouter = require("./routes/bookings");
+const adminRouter = require("./routes/admin");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
@@ -14,6 +15,7 @@ app.set("views", "views");
 
 // bookings routers
 app.use("/", bookingRouter);
+app.use("/admin", adminRouter);
 
 app.use((req, res, next) => {
   res.render("404", { pageTitle: "404: Page not found" });
