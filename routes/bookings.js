@@ -12,4 +12,8 @@ Router.get("/", getIndexController);
 Router.get("/listings", getListingsController);
 Router.get("/listings/:listingId", getBookDetail);
 Router.get("/book-now", getBooking);
+
+// post routes
+// Router.post('/listing')
+
 module.exports = Router;

@@ -12,7 +12,7 @@ block contents
 
         .listing-form-container
             h3 Add a Listing
-            form(action="")
+            form(action="/admin/add-listing" method="POST")
                 label(for="hotel") Hotel name
                 input(type="text" name="hotel" placeholder="Hotel name" required)
                 input(type="url" name="image" placeholder="Enter room image url" required)
@@ -20,7 +20,7 @@ block contents
                 input(type="text" name="hotelLocation" placeholder="Hotel location" required)
                 input(type="url" name="mapLocation" placeholder="Hotel URL on Google maps")
                 label(for="resources") Hotel Resources 
-                textarea(name="resources" placeholder="Hotel Resources" rows="5" required) Hotel Resources
+                textarea(name="resources" placeholder="Hotel Resources" rows="5" required)
                 label(for="roomTypes") Room types
                 input(type="text" placeholder="Room types" name="roomTypes" required)
                 label(for="priceRange") Price range (INR)
@@ -29,5 +29,5 @@ block contents
                     span -
                     input(type="number" placeholder="End price" name="endPrice" required) 
                 label(for="hotelDescription") Hotel description
-                textarea(name="hotelDescription" placeholder="Hotel description" rows="5" required) Hotel description
+                textarea(name="hotelDescription" placeholder="Hotel description" rows="5" required) 
                 input(type="submit" value="Add Listing").add-listing-btn

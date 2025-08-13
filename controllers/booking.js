@@ -1,15 +1,32 @@
+const Listing = require("../models/Listing");
+
 exports.getIndexController = (req, res, next) => {
-  res.render("index", {
-    pageTitle: "Home: find all available hotel listings",
-    path: "/",
-  });
+  Listing.find()
+    .limit(4)
+    .then((listings) => {
+      res.render("index", {
+        pageTitle: "Home: find all available hotel listings",
+        path: "/",
+        listings: listings,
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
 
 exports.getListingsController = (req, res, next) => {
-  res.render("listings", {
-    pageTitle: "Listings: find your next stay",
-    path: "/listings",
-  });
+  Listing.find()
+    .then((listings) => {
+      res.render("listings", {
+        pageTitle: "Listings: find your next stay",
+        path: "/listings",
+        listings: listings,
+      });
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 };
 
 exports.getBookDetail = (req, res, next) => {
@@ -25,4 +42,37 @@ exports.getBooking = (req, res, next) => {
     path: "/book-now",
     pageTitle: "",
   });
+};
+
+// all post controllers
+exports.postAddListToDb = (req, res, next) => {
+  const {
+    hotel,
+    image,
+    hotelLocation,
+    mapLocation,
+    resources,
+    roomTypes,
+    startPrice,
+    endPrice,
+    hotelDescription,
+  } = req.body;
+  const newListing = new Listing({
+    name: hotel,
+    image,
+    hotelLocation,
+    mapLocation,
+    resources,
+    roomTypes,
+    startPrice,
+    endPrice,
+    hotelDescription,
+  });
+
+  newListing
+    .save()
+    .then((data) => {
+      res.redirect("/");
+    })
+    .catch((err) => console.error(err));
 };
